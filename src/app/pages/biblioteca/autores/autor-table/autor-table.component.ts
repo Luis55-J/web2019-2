@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder } from '@angular/forms';
+import { AuthorService } from 'src/app/services/author.service';
 
 @Component({
   selector: 'app-autor-table',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AutorTableComponent implements OnInit {
 
-  constructor() { }
+  public autorFormulario:FormGroup;
+  public author:any;
+
+
+  constructor(protected fb:FormBuilder,protected service:AuthorService) { 
+    
+  }
 
   ngOnInit() {
+   this.service.getAuthor().subscribe(data=>{this.author=data;})
   }
+
+ 
+
+  
 
 }

@@ -10,18 +10,22 @@ import { ExistenciaComponent } from './existencia/existencia.component';
 import { BibliotecaComponent } from './biblioteca.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AutoresModule } from './autores/autores.module';
+import { AreasFormComponent } from './areas/areas-form/areas-form.component';
+import { AreasTableComponent } from './areas/areas-table/areas-table.component';
+import { AreasModule } from './areas/areas.module';
 
 
 
 @NgModule({
-  declarations: [BibliotecaComponent,EditorialComponent,TiposComponent,AreasComponent,
+  declarations: [BibliotecaComponent,EditorialComponent,TiposComponent,
     LibrosComponent,ExistenciaComponent],
   imports: [
     CommonModule,
     BibliotecaRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    AutoresModule
+    AutoresModule,
+    AreasModule
   ]
 })
 export class BibliotecaModule { }

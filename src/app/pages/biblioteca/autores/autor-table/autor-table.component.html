@@ -1,1 +1,11 @@
-<p>autor-table works!</p>
+<table>
+        <tr>
+            <td>Nombre</td>
+            <td>Apellido</td>
+       
+        </tr>
+        <tr *ngFor = "let author of author">
+            <td>{{author.name}}</td>
+            <td>{{author.lastname}}</td>
+        </tr>
+      </table>

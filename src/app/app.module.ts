@@ -6,10 +6,11 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { TemplateComponent } from './template/template.component';
 import { SharedModule } from './shared/shared.module';
+import {HttpClientModule} from '@angular/common/http'
 
 @NgModule({
   declarations: [AppComponent,LoginComponent,TemplateComponent],
-  imports: [BrowserModule,AppRoutingModule,SharedModule],
+  imports: [BrowserModule,AppRoutingModule,SharedModule,HttpClientModule],
   providers: [],
   bootstrap: [AppComponent]
 })
